@@ -1,30 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.0.11'
+gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development do
+  gem 'sqlite3', '1.3.5'
+end
 
-gem 'sqlite3'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '3.2.5'
+  gem 'coffee-rails', '3.2.2'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+  gem 'uglifier', '1.2.3'
+end
 
-# To use debbuger
-# gem 'ruby-debug'
+gem 'jquery-rails', '2.0.2'
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri', 1.4.1' 
-# gem 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for certain environments:
-# gem 'rspec', :group => :test
-# group :test do
-#  gem 'webrat'
-# end
-
+group :production do
+  gem 'pg', '0.12.2'
+end
